@@ -6,4 +6,4 @@ on:
 
 jobs:
   build:
-    uses: .github/workflows/regression.yml@e72f0bba8bd8e7d28b6e285bfa6d54a1a7547e8a
+    uses: ./.github/workflows/regression.yml@e72f0bba8bd8e7d28b6e285bfa6d54a1a7547e8a
