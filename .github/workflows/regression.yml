@@ -9,6 +9,8 @@ on:
     branches: 
       - 'develop'
       - 'master'
+  schedule:
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
@@ -16,7 +18,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix: 
-        config_set: [BaseMPI, ReverseMPI, ForwardMPI, BaseNoMPI, ReverseNoMPI, ForwardNoMPI, BaseOMP, ReverseOMP, ForwardOMP]
+        #config_set: [BaseMPI, ReverseMPI, ForwardMPI, BaseNoMPI, ReverseNoMPI, ForwardNoMPI, BaseOMP, ReverseOMP, ForwardOMP]
+        config_set: [BaseMPI]
         include:
           - config_set: BaseMPI
             flags: '-Denable-pywrapper=true -Denable-tests=true --warnlevel=3 --werror'
