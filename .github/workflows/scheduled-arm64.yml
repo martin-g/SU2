@@ -1,0 +1,9 @@
+name: Regression and Unit Post-Validation on Linux ARM64
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  build:
+    uses: ./github/workflows/regression.yml

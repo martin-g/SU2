@@ -9,8 +9,11 @@ on:
     branches: 
       - 'develop'
       - 'master'
-  schedule:
-    - cron: "*/5 * * * *"
+  workflow_call:
+    # workflows: ["Regression and Unit Post-Validation on Linux ARM64"]
+    # types: [requested]
+    # branches:
+      # - 'develop'
 
 jobs:
   build:
