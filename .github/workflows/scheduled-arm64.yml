@@ -5,6 +5,7 @@ on:
     - cron: "*/2 * * * *"
 
 jobs:
-  build:
+  regression:
     uses: ./.github/workflows/regression.yml
     runs-on: self-hosted
+    
